@@ -5,7 +5,7 @@ pipeline{
 			agent {label "pipeNode"}
 			steps{
 				bat label:'',script:" echo helloworld"
-				//echo "helloworld1"	//这里直接执行也是可以的
+				echo "helloworld1"	//这里直接执行也是可以的
 			}
 		}
 	}
