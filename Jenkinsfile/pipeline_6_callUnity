@@ -1,5 +1,5 @@
 pipeline{
-	agent {label "pipeNode"}	//这里使用单独节点，主节点路径因为有空格，所以换成单独节点执行
+	agent {label "JenkinsTest"}	//这里使用单独节点，主节点路径因为有空格，所以换成单独节点执行
 	
 	environment{
 		UNITY_EDITOR='D:/"Program Files"/Unity/Editor/unity.exe'
