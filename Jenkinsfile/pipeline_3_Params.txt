@@ -25,7 +25,7 @@ pipeline{
 				//echo "helloworld1"	//这里直接执行也是可以的
 				//"svn help"
 				// sleep(5)
-				bat label:'',script:" echo $str"
+				//bat label:'',script:" echo $str"
 				
 				
 			}
