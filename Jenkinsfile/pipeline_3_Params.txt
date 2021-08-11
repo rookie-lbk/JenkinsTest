@@ -1,5 +1,5 @@
 pipeline{
-	agent any	//不分配节点 stage如果不指定 会报错 none 
+	//agent any	//不分配节点 stage如果不指定 会报错 none 
 	
 	parameters{
 		string(name:"str",defaultValue:"defaultValue",description:"some words")
