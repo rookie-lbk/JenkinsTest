@@ -1,19 +1,19 @@
 pipeline{
 	agent any	//不分配节点 stage如果不指定 会报错 none 
 	
-	//parameters{
-	//	string(name:"str",defaultValue:"defaultValue",description:"some words")
+	parameters{
+		string(name:"str",defaultValue:"defaultValue",description:"some words")
 		
-	//	text(name: 'DEPLOY_TEXT', defaultValue: 'One\nTwo\nThree\n', description: "--")
+		text(name: 'DEPLOY_TEXT', defaultValue: 'One\nTwo\nThree\n', description: "--")
 		
-	//	booleanParam(name: 'DEBUG_BUILD', defaultValue: true, description: "--")
+		booleanParam(name: 'DEBUG_BUILD', defaultValue: true, description: "--")
 		
-	//	choice(name:"choicevalueArr",choices:["valueC","ValueB","ValueA"],description:"this is a choice")
+		choice(name:"choicevalueArr",choices:["valueC","ValueB","ValueA"],description:"this is a choice")
 
-	//	choice(name:"choicevalueArr2",choices:"valueA\nValueB\nValueC",description:"this is a choice")
+		choice(name:"choicevalueArr2",choices:"valueA\nValueB\nValueC",description:"this is a choice")
 
 		
-	//}
+	}
 	
 	
 	
