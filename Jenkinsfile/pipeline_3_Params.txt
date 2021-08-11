@@ -19,7 +19,7 @@ pipeline{
 	
 	stages{
 		stage("empty test"){
-			agent {label "JenkinsTest"}
+			//agent {label "JenkinsTest"}
 			steps{
 				bat label:'',script:" echo helloworld"
 				//echo "helloworld1"	//这里直接执行也是可以的
