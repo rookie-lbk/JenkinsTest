@@ -2,7 +2,7 @@ pipeline{
 	agent any	//不分配节点 stage如果不指定 会报错 none 
 	stages{
 		stage("empty test"){
-			// agent {label "pipeNode"}
+			agent {label "pipeNode"}
 			steps{
 				bat label:'',script:" echo helloworld"
 				//echo "helloworld1"	//这里直接执行也是可以的
