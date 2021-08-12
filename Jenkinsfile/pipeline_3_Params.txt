@@ -21,6 +21,7 @@ pipeline{
 		stage("empty test3"){
 			//agent {label "JenkinsTest"}
 			steps{
+				cleanWs()
 				bat label:'',script:" echo helloworld"
 				//echo "helloworld1"	//这里直接执行也是可以的
 				//"svn help"
