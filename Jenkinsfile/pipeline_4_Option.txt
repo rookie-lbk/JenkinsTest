@@ -1,9 +1,9 @@
 pipeline{
 	agent {label "JenkinsTest"}
 	options{
-		 timestamps()//打印时间戳
+		//timestamps()//打印时间戳
 		disableConcurrentBuilds()//禁止并发
-		timeout(time:3,unit:'SECONDS')
+		//timeout(time:3,unit:'SECONDS')
 	}
 	stages{
 		stage("empty test"){
