@@ -2,7 +2,7 @@ pipeline{
 	agent {label "JenkinsTest"}
 	options{
 		 timestamps()//打印时间戳
-		//disableConcurrentBuilds()//禁止并发
+		disableConcurrentBuilds()//禁止并发
 		timeout(time:3,unit:'SECONDS')
 	}
 	stages{
