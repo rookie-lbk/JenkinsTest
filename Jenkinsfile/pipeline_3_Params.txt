@@ -18,7 +18,7 @@ pipeline{
 	
 	
 	stages{
-		stage("empty test"){
+		stage("empty test3"){
 			//agent {label "JenkinsTest"}
 			steps{
 				bat label:'',script:" echo helloworld"
@@ -31,19 +31,19 @@ pipeline{
 			}
 		}
 	}
-	//post{
-	//	always{
-	//		bat label:'',script:"echo always show this msg"
-	//	}
-	//	aborted{
-	//		bat label:'',script:" echo some stage aborted"
-	//	}
-	//	failure{
-	//		bat label:'',script:" echo some stage failure"
-	//	}
-	//	success{
-	//		bat label:'',script:" echo all success"
-	//	}
-	//}
+	post{
+		always{
+			bat label:'',script:"echo always show this msg"
+		}
+		aborted{
+			bat label:'',script:" echo some stage aborted"
+		}
+		failure{
+			bat label:'',script:" echo some stage failure"
+		}
+		success{
+			bat label:'',script:" echo all success"
+		}
+	}
 	
 }
