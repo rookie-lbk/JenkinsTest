@@ -18,31 +18,31 @@ pipeline{
 			}
 		}
 		
-		stage("Clean project"){
-			
-			steps{
-					//切换到工程目录
-					//然后使用gradle 命令
-				bat label:'',script:"""
-					cd Test
-					gradle clean
-				
-				"""
-			}
-		}
-		 
-		stage("Release APK"){
-
-			steps{
-				//切换到工程目录
-				//然后使用gradle 命令
-				bat label:'',script:"""
-					cd Test
-					gradle assembleRelease
-
-				"""
-			}
-		}
+		//stage("Clean project"){
+		//	
+		//	steps{
+		//			//切换到工程目录
+		//			//然后使用gradle 命令
+		//		bat label:'',script:"""
+		//			cd Test
+		//			gradle clean
+		//		
+		//		"""
+		//	}
+		//}
+		// 
+		//stage("Release APK"){
+        //
+		//	steps{
+		//		//切换到工程目录
+		//		//然后使用gradle 命令
+		//		bat label:'',script:"""
+		//			cd Test
+		//			gradle assembleRelease
+        //
+		//		"""
+		//	}
+		//}
 		 
 		
 		//stage("build project"){
