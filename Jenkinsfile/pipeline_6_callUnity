@@ -4,7 +4,7 @@ pipeline{
 	
 	environment{
 		UNITY_EDITOR='E:/"Unity Hub"/2018.4.36f1/Editor/Unity.exe'
-		PROJECTPATH='E:/"Unity Hub"/2018.4.36f1/Test'
+		PROJECTPATH='E:/StudyData/Unity/Projects/JenkinsBuildTest'
 		
 	}
 	
