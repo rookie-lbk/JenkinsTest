@@ -3,7 +3,8 @@ import os
 import json
 
 import sys
-reload(sys)
+import importlib
+importlib.reload(sys)
 
 sys.setdefaultencoding('utf8')
 currentDir = os.path.split(os.path.realpath(__file__))[0]
