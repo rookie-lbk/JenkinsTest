@@ -6,7 +6,7 @@ import sys
 import importlib
 importlib.reload(sys)
 
-sys.setdefaultencoding('utf8')
+# sys.setdefaultencoding('utf8')
 currentDir = os.path.split(os.path.realpath(__file__))[0]
 
 def OnStart():
