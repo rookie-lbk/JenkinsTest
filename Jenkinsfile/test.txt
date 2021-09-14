@@ -1,0 +1,37 @@
+pipeline{
+    agent any
+
+    stages
+    {
+        stage("git"){
+            steps{
+				checkout([$class: 'GitSCM', branches: [[name: '*/master']],
+                doGenerateSubmoduleConfigurations: false, 
+				extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'Git']],
+                submoduleCfg: [],
+				userRemoteConfigs: [[credentialsId: 'MyGitSSH', url: 'git@github.com:rookie-lbk/JenkinsTest.git']]])
+            }
+        }
+        stage("reset"){
+            steps{
+                bat label: '', script: """python ${env.WORKSPACE}\\Git\\Pythonfile\\Clean.py """
+            }
+        }
+         stage("build_player")
+        {
+            steps
+            {
+                bat label: '', script: """"E:\\Unity Hub\\2018.4.36f1\\Editor\\Unity.exe" -isDebug 0 -forWhat build_player -env "android_test" -buildTarget Android -quit -batchmode -nographics -logFile build.log -projectPath "${env.WORKSPACE}\\Git\\UnityProject" -executeMethod BuildWindows.ExportAppByGit"""
+            }
+        }
+    }
+    post
+    {
+        success{
+            echo 'success'
+        }
+        failure{
+            echo 'failure'
+        }
+    }
+}
