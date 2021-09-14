@@ -16,7 +16,7 @@ public partial class BuildWindows : EditorWindow
         string env = "";
         for (int i = 0; i < count; i++)
         {
-            Debug.Log(args[i]);
+            // Debug.Log(args[i]);
             if (args[i] == "-env")
             {
                 env = args[i + 1];
@@ -59,7 +59,7 @@ public partial class BuildWindows : EditorWindow
         _BuildOptions = BuildOptions.Development | BuildOptions.ConnectWithProfiler | BuildOptions.AllowDebugging;
 
         AssetDatabase.Refresh();
-        Debug.Log("on start build player " + PlayerSettings.GetApplicationIdentifier(BuildTargetGroup.Android));
+        // Debug.Log("on start build player " + PlayerSettings.GetApplicationIdentifier(BuildTargetGroup.Android));
         bool isSuccess = false;
 
         try
