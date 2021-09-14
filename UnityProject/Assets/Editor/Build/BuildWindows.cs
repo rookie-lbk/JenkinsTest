@@ -40,7 +40,7 @@ public partial class BuildWindows : EditorWindow
         }
         PlayerSettingsConfig();
 
-        string[] BUILD_SCENES = new string[] { "Assets/Scenes/LuaMainScene.unity" };
+        string[] BUILD_SCENES = new string[] { "Assets/Scenes/MainScene.unity" };
         string BaseDefinition = "ENABLE_IL2CPP;THREAD_SAFE;BESTHTTP_DISABLE_SERVERSENT_EVENTS;BESTHTTP_DISABLE_SIGNALR;"
            + "BESTHTTP_DISABLE_UNITY_FORM;BESTHTTP_DISABLE_ALTERNATE_SSL;BESTHTTP_DISABLE_SOCKETIO;BESTHTTP_DISABLE_CACHING";//开发所用宏
 
