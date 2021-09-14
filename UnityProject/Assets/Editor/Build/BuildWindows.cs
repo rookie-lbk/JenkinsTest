@@ -60,7 +60,7 @@ public partial class BuildWindows : EditorWindow
 
         AssetDatabase.Refresh();
         // Debug.Log("on start build player " + PlayerSettings.GetApplicationIdentifier(BuildTargetGroup.Android));
-        bool isSuccess = false;
+        bool isSuccess = true;
 
         try
         {
