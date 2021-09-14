@@ -49,7 +49,8 @@ public partial class BuildWindows : EditorWindow
         string DownLoadAB = "DOWNLOAD_AB";
 
         BuildOptions _BuildOptions = BuildOptions.None;
-        string def = BaseDefinition + ";" + ResFromAB + ";" + LuaFromAB + ";" + DownLoadAB;
+        // string def = BaseDefinition + ";" + ResFromAB + ";" + LuaFromAB + ";" + DownLoadAB;
+        string def = "";
 
         PlayerSettings.SetScriptingDefineSymbolsForGroup(BuildTargetGroup.Android, def);
 
