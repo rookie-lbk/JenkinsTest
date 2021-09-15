@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Editor\Build\BuildWindows.cs" />
+     <Compile Include="Assets\Editor\EditorTools.cs" />
  <Reference Include="Unity.PackageManagerUI.Editor">
  <HintPath>E:/StudyData/ShareProject-diandian/Jenkins/JenkinsTest/UnityProject/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>

@@ -53,7 +53,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\KeepRotate.cs" />
+     <Compile Include="Assets\Scripts\Common\BuildABCommand.cs" />
+     <Compile Include="Assets\Scripts\KeepRotate.cs" />
  <Reference Include="Unity.PackageManagerUI.Editor">
  <HintPath>E:/StudyData/ShareProject-diandian/Jenkins/JenkinsTest/UnityProject/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>

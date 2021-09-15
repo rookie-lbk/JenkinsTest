@@ -24,14 +24,55 @@ pipeline{
                 bat label: '', script: """"E:\\Unity Hub\\2018.4.36f1\\Editor\\Unity.exe" -isDebug 0 -forWhat build_player -env "android_test" -buildTarget Android -quit -batchmode -nographics -logFile build.log -projectPath "${env.WORKSPACE}\\Git\\UnityProject" -executeMethod BuildWindows.ExportAppByGit"""
             }
         }
+        stage("deploy"){
+            steps{
+                bat label: '', script: """ curl -F "file=${env.WORKSPACE}\\Git\\UnityProject\\OutBuild\\UnityProjectDebug.apk" http://192.168.40.128:8080/jenkinsfile/apks """
+            }
+        }
+         stage("show_apk")
+        {
+            steps
+            {
+                bat label: '', script: """start ${env.WORKSPACE}\\Git\\UnityProject\\OutBuild"""
+            }
+        }
     }
     post
     {
         success{
-            echo 'success'
+            wrap([$class: 'BuildUser']) {
+               script {
+                   buildUser = "${env.BUILD_USER}"
+               }
+            }
+
+            dingTalk(
+            robot:'JenkinsTest',
+            type: 'LINK',
+            title: 'BuildAndroidTestApk Success',
+            text: [
+                    "Build By ${buildUser}"
+                ],
+            messageUrl: 'http://www.baidu.com',
+            picUrl: 'https://www.iconsdb.com/icons/preview/soylent-red/activity-feed-xxl.png'
+            )
         }
         failure{
-            echo 'failure'
+            wrap([$class: 'BuildUser']) {
+               script {
+                   buildUser = "${env.BUILD_USER}"
+               }
+            }
+            dingTalk(
+            robot:'JenkinsTest',
+            type: 'LINK',
+            title: 'BuildAndroidTestApk failed',
+            text: [
+                    "Build By ${buildUser}"
+                ],
+            messageUrl: 'http://www.baidu.com',
+            picUrl: 'https://www.iconsdb.com/icons/preview/soylent-red/activity-feed-xxl.png'
+            )
         }
     }
 }

@@ -7,6 +7,10 @@ using UnityEditor.Build.Reporting;
 
 public partial class BuildWindows : EditorWindow
 {
+    public static void ExportABByGit()
+    {
+        BuildABCommand.OnStartBuildAB();
+    }
     public static void ExportAppByGit()
     {
         Debug.Log("------------------ExportAppByGit--------------------");
